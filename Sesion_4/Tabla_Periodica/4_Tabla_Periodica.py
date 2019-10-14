@@ -194,7 +194,6 @@ while(True):
       molecula = get_molecule(tabla)
       print("Molécula:")
       for i in range(len(molecula[1])):
-          print(i)
           symbol = molecula[0][i][0]
           coef = molecula[1][i]
           print("Simbolo: {} - Coeficiente: {}".format(symbol, coef))
