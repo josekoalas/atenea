@@ -4,6 +4,13 @@ import sys
 import inspect
 import numpy as np
 
+#*** Tabla Pyriodica ***
+#Calcula fórmulas de átomos y moléculas, además del peso molecular
+#Necesitas el archivo "tablaperiodica" en la misma ubicación que este
+
+#Este programa funciona con métodos (Los que empiezan por def), por lo tanto
+#el programa en si se encuentra en las últimas lineas, y referencian a las superiores
+
 
 #DIRECTORIO
 #Obtener la localización del archivo .py
