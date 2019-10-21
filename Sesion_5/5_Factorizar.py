@@ -34,6 +34,4 @@ def factors(n):
             if n < 2:
                 return fl
 
-factors(10)
-
-print(factors(99999))
+print(factors(int_input("n = ")))
