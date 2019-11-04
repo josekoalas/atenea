@@ -1,3 +1,4 @@
+#DEFINICION DE MODULOS
 #Maximo Comun Divisor y Minimo Comun Multiplo
 
 #Obtener numero entero positivo
@@ -36,7 +37,7 @@ def primes(n):
         return pl
 
 #Elige los factores de entre la lista de primos hasta ese numero
-def factors(n):
+def pre_factors(n):
 	fl = []
 	for p in primes(n):
 		while n%p==0:
@@ -44,7 +45,10 @@ def factors(n):
 			n=n//p
 			if n < 2:
 				return fl
-	
+def factors(n):
+	m = pre_factors(n)
+	if m == None: m = ([n])
+	return m
 
 #Dividir en factores y exponentes
 def order_factors(f):
@@ -97,15 +101,3 @@ def mcd(a, b):
 	for i in range(len(base)):
 		m = m * base[i] ** exp[i]
 	return m
-
-
-#Obtener numeros FIX THIS
-a, b = int_input("A = "), int_input("B = ")
-fa, fb = factors(a), factors(b)
-if fa == None: fa = ([a])
-if fb == None: fb = ([b])
-fa = order_factors(fa)
-fb = order_factors(fb)
-
-print("Factores de A: {} - Factores de B: {}".format(fa, fb))
-print("Maximo Comun Divisor: {} - Minimo Comun Multiplo: {}".format(mcd(fa, fb), mcm(fa,fb)))
